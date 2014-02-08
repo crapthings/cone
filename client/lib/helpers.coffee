@@ -23,3 +23,6 @@ Helper 'usersOnline', ->
 		sort:
 			online: true
 			username: true
+
+Helper 'thisYear', ->
+	return moment().format('YYYY')
