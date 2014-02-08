@@ -1,0 +1,11 @@
+<template name="backend-tasks-uncompleted-list">
+
+	<table class="fit-container">
+		<tbody>
+			{{#each uncompleted}}
+				{{> taskItem}}
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>

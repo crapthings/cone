@@ -1,0 +1,35 @@
+<template name="taskView">
+
+	<div class="pd15">
+		{{> backend-tasks-nav}}
+	</div>
+
+	<div class="pd30">
+		{{#with task}}
+			<div>
+				<h4 class="clearfix">
+					<small class="pull-right">
+						<time class="timeago" datetime="{{timeago createdAt}}"></time>
+					</small>
+					<a href="">
+						{{creator.displayName}} <small>@{{creator.username}}</small>
+
+					</a>
+				</h4>
+			</div>
+			<div>{{content}}</div>
+			{{#if images}}
+				<div class="task-images-wrapper pd15 bottom-bordered">
+					{{#each images}}
+						<a href="{{imagesPath this}}" target="_blank">
+							<img src="{{imagesPath this}}" alt="" />
+						</a>
+					{{/each}}
+				</div>
+			{{/if}}
+			{{> fastCommentForm}}
+		{{/with}}
+		{{> taskCommentsList}}
+	</div>
+
+</template>

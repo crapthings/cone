@@ -1,0 +1,14 @@
+<template name="website-layout">
+
+	<div id="website-layout-wrapper" class="isWebsite">
+		<div id="website-layout">
+		{{> website-topnav}}
+			<div id="website-page">
+				{{yield}}
+			</div>
+		</div>
+	</div>
+
+	<script src='/smooth-scroll.js'></script>
+
+</template>

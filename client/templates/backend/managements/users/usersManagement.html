@@ -1,0 +1,20 @@
+<template name="usersManagement">
+
+	<div class="pd15 pdtb30">
+		<h3 class="nmg">用户</h3>
+	</div>
+	<div class="pd15">
+		{{> backend-managements-nav}}
+		<div class="mgb30 pdtb30">
+			<ul class="list-inline nmg">
+				<li>
+					<h4 class="nmg">
+						<a href="{{pathFor 'newUser'}}" class="btn btn-default">创建新用户</a>
+					</h4>
+				</li>
+			</ul>
+		</div>
+		{{> usersList}}
+	</div>
+
+</template>

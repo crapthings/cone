@@ -1,0 +1,35 @@
+<template name="backend-notes-list">
+
+	<ul class="list-unstyled">
+		{{#each myLatestNotes}}
+			{{> backend-notes-item}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="backend-notes-item">
+
+	<li class="mgb30 pdlr15">
+		<div class="mgb10">{{content}}</div>
+		<div class="btn-toolbar clearfix">
+			<div class="btn-group pull-right">
+				<!-- <button type="button" class="btn btn-default btn-xs">
+					<i class="fa fa-edit"></i>
+				</button> -->
+				<button type="button" class="btn btn-default btn-xs" data-action="remove">
+					<i class="fa fa-trash-o"></i>
+				</button>
+			</div>
+			<ul class="list-inline">
+				<li>
+					<button type="button" class="btn btn-default btn-xs">
+						<i class="fa fa-clock-o"></i>
+						<time class="timeago" datetime="{{timeago createdAt}}"></time>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</li>
+
+</template>

@@ -1,0 +1,28 @@
+<template name="backend-leftnav">
+
+	<aside id="backend-leftnav" class="hidden-xs">
+		<div>
+			<a href="{{pathFor 'backend-my'}}" class="block">
+				<img src="{{imagesPath currentUser.profile.avatarUrl}}" width="80" height="80" alt="头像">
+			</a>
+		</div>
+		<ul class="list-unstyled list-icon">
+			<li>
+				<a href="{{pathFor 'backend-my'}}">
+					<i class="fa fa-desktop"></i> 我的
+				</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'backend-tasks'}}">
+					<i class="fa fa-tasks"></i> 任务
+				</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'managements'}}">
+					<i class="fa fa-cogs"></i> 管理
+				</a>
+			</li>
+		</ul>
+	</aside>
+
+</template>

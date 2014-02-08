@@ -1,0 +1,61 @@
+<template name="mobile-tasks">
+
+	<div style="padding: 15px;">
+		<h4>有{{system.stats.tasks.urgency}}个紧急的任务</h4>
+	</div>
+	<ul class="list-unstyled" style="margin: 0 15px 0 31px; padding: 15px 0; border-left: 1px solid rgba(255, 255, 255, .4); font-size: 16px; ">
+		{{#each urgency}}
+			<li style="position: relative; margin-bottom: 30px; padding: 10px 20px 10px 40px; background-color: rgba(255, 255, 255, .1);">
+				<img src="{{imagesPath creator.profile.avatarUrl}}" alt="" style="position: absolute; left: -20px; width: 40px; height: 40px; border-radius: 40px;">
+				<div class="clearfix" style="margin-bottom: 10px; font-size: 14px;">
+					<span class="label label-danger pull-right">重要</span>
+					<a href="">{{creator.displayName}} <small>@{{creator.username}}</small></a>
+				</div>
+				<div style="margin-bottom: 15px;">{{content}}</div>
+				<ul class="list-inline" style="font-size: 12px;">
+					<li>
+						<a href="">
+							<i class="fa fa-clock-o"></i>
+							<time class="timeago" datetime="{{timeago createdAt}}"></time>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="fa fa-comments-o"></i> 讨论 <sup>0</sup>
+						</a>
+					</li>
+				</ul>
+			</li>
+		{{/each}}
+	</ul>
+
+	<div style="padding: 15px;">
+		<h4>有{{system.stats.tasks.uncompleted}}个未完成的任务</h4>
+	</div>
+	<ul class="list-unstyled" style="margin: 0 15px 0 31px; padding: 15px 0; border-left: 1px solid rgba(255, 255, 255, .4); font-size: 16px; ">
+		{{#each uncompleted}}
+			<li style="position: relative; margin-bottom: 30px; padding: 10px 20px 10px 40px; background-color: rgba(255, 255, 255, .1);">
+				<img src="{{imagesPath creator.profile.avatarUrl}}" alt="" style="position: absolute; left: -20px; width: 40px; height: 40px; border-radius: 40px;">
+				<div class="clearfix" style="margin-bottom: 10px; font-size: 14px;">
+					<span class="label label-danger pull-right">重要</span>
+					<a href="">{{creator.displayName}} <small>@{{creator.username}}</small></a>
+				</div>
+				<div style="margin-bottom: 15px;">{{content}}</div>
+				<ul class="list-inline" style="font-size: 12px;">
+					<li>
+						<a href="">
+							<i class="fa fa-clock-o"></i>
+							<time class="timeago" datetime="{{timeago createdAt}}"></time>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<i class="fa fa-comments-o"></i> 讨论 <sup>0</sup>
+						</a>
+					</li>
+				</ul>
+			</li>
+		{{/each}}
+	</ul>
+
+</template>

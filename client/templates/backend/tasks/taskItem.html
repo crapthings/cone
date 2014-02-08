@@ -1,0 +1,88 @@
+<template name="taskItem">
+
+	<tr>
+		<td width="30">
+			<div class="pd15">
+				{{#if completed}}
+					<a href="javascript:;" data-action="uncomplete">
+						<i class="fa fa-check-square-o"></i>
+					</a>
+				{{else}}
+					<a href="javascript:;" data-action="complete">
+						<i class="fa fa-square-o"></i>
+					</a>
+				{{/if}}
+			</div>
+		</td>
+		<td width="60">
+			<div class="pd15">
+				<a href="">
+					<img src="{{imagesPath creator.profile.avatarUrl}}" class="inlist-avatar" alt="">
+				</a>
+			</div>
+		</td>
+		<td>
+			<div class="pd15">
+				<div class="mgb10 text-small">
+					<a href="">{{creator.displayName}}
+						<small>@{{creator.username}}</small>
+					</a>
+				</div>
+				<div class="mgb15">
+					<a href="{{pathFor 'taskView'}}">{{content}}</a>
+				</div>
+				<div class="text-small clearfix">
+					<ul class="list-inline pull-right">
+						<li>
+							<a href="javascript:;" data-action="complete">完成</a>
+						</li>
+						<li>
+							{{#if urgency}}
+								<a data-action="unurgency">
+									<del>紧急</del>
+								</a>
+							{{else}}
+								<a data-action="urgency">紧急</a>
+							{{/if}}
+						</li>
+						<li>
+							{{#if closed}}
+								<a data-action="unclose">
+									<del>关闭</del>
+								</a>
+							{{else}}
+								<a data-action="close">关闭</a>
+							{{/if}}
+						</li>
+						<li>
+							<a href="javascript:;" data-action="remove">删除</a>
+						</li>
+					</ul>
+					<ul class="list-inline">
+						<li>
+							<a href="">
+								<i class="fa fa-clock-o"></i>
+								<time class="timeago" datetime="{{timeago createdAt}}"></time>
+							</a>
+						</li>
+						<li>
+							<a href="{{pathFor 'taskView'}}">
+								<i class="fa fa-comments-o"></i> 讨论
+								<sup>{{stats.comments}}</sup>
+							</a>
+						</li>
+						{{#if images}}
+							<li>
+								<a href="">
+									<i class="fa fa-picture-o"></i> 图片
+									<sup>{{images.length}}</sup>
+								</a>
+							</li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+		</td>
+	</tr>
+
+</template>

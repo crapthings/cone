@@ -1,0 +1,73 @@
+<template name="taskCommentsList">
+
+	<div>
+		<div class="pd30 bottom-bordered">
+			<h3 class="nmg">讨论列表</h3>
+		</div>
+		<ul class="list-unstyled nmg">
+			{{#each taskComments}}
+				{{> taskCommentItem}}
+			{{/each}}
+		</ul>
+	</div>
+
+</template>
+
+<template name="taskCommentItem">
+
+	<li class="pd30 bottom-bordered clearfix">
+		<div style="float: left; width: 50px;">
+			<a href="" class="block" style="overflow: hidden; border-radius: 50px;">
+				<img src="{{imagesPath creator.profile.avatarUrl}}" width="50" height="50" alt="">
+			</a>
+		</div>
+		<div style="margin-left: 80px;">
+			<div class="mgb10 text-small">
+				<a href="">{{creator.displayName}}</a>
+				<a href="">
+					<small>@{{creator.username}}</small>
+				</a>
+			</div>
+			<div class="mgb10">
+				{{content}}
+			</div>
+			<div class="text-small">
+				<ul class="list-inline">
+					<li class="pull-right show-on-hover">
+						<div class="dropdown">
+							<a href="javascript:;" data-toggle="dropdown">
+								<i class="fa fa-cog"></i>
+							</a>
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<a href="javascript:;" class="remove">删除</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="{{pathFor 'taskView'}}">
+							<i class="fa fa-clock-o"></i>
+							<time class="timeago" datetime="{{timeago createdAt}}"></time>
+						</a>
+					</li>
+					<li>
+						<a href="{{pathFor 'taskView'}}">
+							<i class="fa fa-comments-o"></i> 讨论
+							<sup>{{stats.comments}}</sup>
+						</a>
+					</li>
+					{{#if images}}
+						<li>
+							<a href="{{pathFor 'taskView'}}">
+								<i class="fa fa-picture-o"></i> 图片
+								<sup>{{images.length}}</sup>
+							</a>
+						</li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	</li>
+
+</template>

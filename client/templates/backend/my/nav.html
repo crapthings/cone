@@ -1,0 +1,12 @@
+<template name="backend-my-nav">
+
+	<h3 class="pdtb15">{{page.title}}</h3>
+	<ul class="nav nav-tabs">
+		<li class="{{activeFor 'backend-my'}}">
+			<a href="{{pathFor 'backend-my'}}">
+				笔记 <sup>{{currentUser.stats.notes}}</sup>
+			</a>
+		</li>
+	</ul>
+
+</template>

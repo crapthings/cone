@@ -1,0 +1,13 @@
+<template name="backend-signout">
+
+	<div id="signout" style="width: 480px;">
+		<img src="http://wallpapers.wallbase.cc/rozne/wallpaper-2552971.jpg" alt="" class="block fit-width" width="480" height="270">
+		<div class="pd30">
+			<h3>您好{{currentUser.displayName}}，您已经登陆。</h3>
+			<div class="clearfix">
+				<a href="javascript: Meteor.logout();" class="btn btn-danger pull-right">退出</a>
+			</div>
+		</div>
+	</div>
+
+</template>

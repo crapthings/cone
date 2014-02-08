@@ -1,0 +1,38 @@
+<template name="backend-topnav">
+
+	<nav id="backend-topnav">
+		<div class="text-logo">
+			<a href="{{pathFor 'backend-my'}}" class="text-logo">
+				球果通信
+			</a>
+		</div>
+		<ul class="list-inline pull-right">
+			<li>
+				<a href="javascript:;">
+					<i class="fa fa-inbox"></i> 收件箱
+				</a>
+			</li>
+			<li>
+				<a href="{{pathFor 'backend-my'}}">
+					{{currentUser.displayName}}
+				</a>
+			</li>
+			<li>
+				<div class="dropdown">
+					<a href="javascript:;" data-toggle="dropdown">
+						<i class="fa fa-cog"></i>
+					</a>
+					<ul class="dropdown-menu pull-right">
+						<li>
+							<a href="{{pathFor 'profile'}}">个人资料</a>
+						</li>
+						<li>
+							<a href="javascript: App.logout();">退出</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+</template>

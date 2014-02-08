@@ -1,0 +1,19 @@
+<template name="mobile-layout">
+
+	<div id="mobile-layout-wrapper" class="is-mobile">
+		<div id="mobile-layout">
+			{{> mobile-topnav}}
+			{{> mobile-leftside}}
+			<div id="mobile-page">
+				{{yield}}
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="mobile-signin-layout">
+
+	{{yield}}
+
+</template>

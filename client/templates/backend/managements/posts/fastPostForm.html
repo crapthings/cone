@@ -1,0 +1,31 @@
+<template name="fastPostForm">
+
+	<form action="javascript:;" id="fastPostForm">
+		<div class="form-group">
+			<input type="text" name="title" class="form-control" placeholder="标题" required>
+		</div>
+		<div class="form-group">
+			<textarea name="content" class="form-control" placeholder="内容" rows="3" required></textarea>
+		</div>
+		<div class="form-group nmg clearfix">
+			<div id="upload-files" class="hide"></div>
+			<div class="hide">
+				<input type="file" id="images-picker" class="hide" accept="image/*" multiple>
+				<input type="file" id="files-picker" class="hide" multiple>
+			</div>
+			<div class="btn-group">
+				<button type="button" id="btn-pick-images" class="btn btn-default btn-sm">
+					<i class="fa fa-picture-o"></i>
+				</button>
+				<button type="button" id="btn-pick-files" class="btn btn-default btn-sm">
+					<i class="fa fa-file-o"></i>
+				</button>
+			</div>
+			<div class="pull-right">
+				<input type="submit" class="btn btn-success btn-sm" value="创建">
+				{{> btn-reset}}
+			</div>
+		</div>
+	</form>
+
+</template>

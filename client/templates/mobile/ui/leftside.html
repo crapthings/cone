@@ -1,0 +1,28 @@
+<template name="mobile-leftside">
+
+	<aside id="mobile-leftside">
+		<ul class="list-unstyled">
+			<li class="{{activeFor 'mobile-home'}}">
+				<a href="{{pathFor 'mobile-home'}}">
+					<i class="fa fa-mobile"></i> 我的
+				</a>
+			</li>
+			<li class="{{activeFor 'mobile-tasks'}}">
+				<a href="{{pathFor 'mobile-tasks'}}">
+					<i class="fa fa-tasks"></i> 任务
+				</a>
+			</li>
+			<li>
+				<a>
+					<i class="fa fa-cogs"></i> 设置
+				</a>
+			</li>
+			<li>
+				<a class="logout">
+					<i class="fa fa-sign-out"></i> 注销
+				</a>
+			</li>
+		</ul>
+	</aside>
+
+</template>

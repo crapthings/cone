@@ -1,0 +1,24 @@
+<template name="layout">
+
+	<div id="layout-wrapper" class="isBackend">
+		{{> backend-topnav}}
+		<div id="layout">
+			{{> backend-leftnav}}
+			{{> backend-rightside}}
+			<div id="page">
+				{{yield}}
+			</div>
+		</div>
+	</div>
+
+</template>
+
+<template name="backend-sign-layout">
+
+	<div id="backend-sign-layout-wrapper">
+		<div id="backend-sign-layout">
+			{{yield}}
+		</div>
+	</div>
+
+</template>

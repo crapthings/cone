@@ -1,0 +1,217 @@
+mg(n)
+	margin-top n
+	margin-right n
+	margin-bottom n
+	margin-left n
+
+mgb(n)
+	margin-bottom n
+
+pd(n)
+	padding-top n
+	padding-right n
+	padding-bottom n
+	padding-left n
+
+pdtb(n)
+	padding-top n
+	padding-bottom n
+
+pdlr(n)
+	padding-left n
+	padding-right n
+
+pdb(n)
+	padding-bottom n
+
+html, body
+	width 100%
+	height @width
+	overflow hidden
+
+body
+	font 14px/1.4 "Hiragino Sans GB", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif
+	-webkit-font-smoothing antialiased
+
+h1, h2, h3
+	margin-top 0
+	margin-bottom 30px
+
+h4, h5, h6
+	margin-top 0
+	margin-bottom 15px
+
+a
+	&:hover
+		text-decoration none
+
+textarea
+	resize none
+
+img.fit
+	width 100%
+
+.relative
+	position relative
+
+.absolute
+	position absolute
+
+.block
+	display block
+
+.inline
+	display inline
+
+.inline-block
+	display inline-block
+
+.nmg
+	mg 0
+
+.mgb5
+	mgb 5px
+
+.mgb10
+	mgb 10px
+
+.mgb15
+	mgb 15px
+
+.mgb30
+	mgb 30px
+
+.mgb60
+	mgb 60px
+
+.mgb120
+	mgb 120px
+
+.npd
+	pd 0
+
+.pd5
+	pd 5px
+
+.pd10
+	pd 10px
+
+.pd15
+	pd 15px
+
+.pd20
+	pd 20px
+
+.pd30
+	pd 30px
+
+.pd60
+	pd 60px
+
+.pd120
+	pd 120px
+
+.pdtb5
+	pdtb 5px
+
+.pdtb15
+	pdtb 15px
+
+.pdtb30
+	pdtb 30px
+
+.pdtb60
+	pdtb 60px
+
+.pdlr15
+	pdlr 15px
+
+.pdlr30
+	pdlr 30px
+
+.text-small
+	font-size 12px
+
+.text-medium
+	font-size 16px
+
+.text-large
+	font-size 20px
+
+.text-big
+	font-size 40px
+
+.text-super
+	font-size 80px
+	font-weight bold
+
+.text-logo
+	font-size 20px
+	font-weight bold
+
+.text-indent
+	text-indent 2em
+
+.form-control-plain
+	border 0
+	border-radius 0
+
+.show-on-hover
+.show-on-focus
+	display none
+
+.focus-actived
+	& .show-on-focus
+		display block
+	& .hide-on-focus
+		display none
+
+.hover-actived:hover
+	& .show-on-hover
+		display block
+
+.right-bordered
+	border-right 1px solid #e9e4e0
+
+.bottom-bordered
+	border-bottom 1px solid #e9e4e0
+
+.text-icon-sm
+	font-size 16px
+
+.has-background
+	background-position center center
+	background-repeat no-repeat
+	background-size cover
+
+.fit-container
+	width 100%
+	height 100%
+
+.background-screen
+	background-position center center
+	background-repeat no-repeat
+	background-size cover
+
+.background-screen.scroll
+	background-attachment scroll
+
+.background-screen.fixed
+	background-attachment fixed
+
+.fit-width
+	width 100%
+
+.fit-height
+	height 100%
+
+.text-color-white
+	color white
+
+.block-center
+	display block
+	margin 0 auto
+
+h1, h2, h3, h4, h5, h6, a, p
+	&.white
+		color white

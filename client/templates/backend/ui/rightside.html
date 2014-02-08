@@ -1,0 +1,15 @@
+<template name="backend-rightside">
+
+	<aside id="backend-rightside" class="hidden-xs">
+		<ul class="users-online">
+			{{#each usersOnline}}
+				<li>
+					<a href="javascript:;">
+						<img src="{{imagesPath profile.avatarUrl}}" alt=""> {{displayName}}
+					</a>
+				</li>
+			{{/each}}
+		</ul>
+	</aside>
+
+</template>

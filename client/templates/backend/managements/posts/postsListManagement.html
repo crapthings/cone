@@ -1,0 +1,45 @@
+<template name="postsListManagement">
+
+	<ul class="list-unstyled">
+		{{#each postsList}}
+			{{> postItemManagement}}
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="postItemManagement">
+
+	<li class="pd15 bottom-bordered">
+		<h5>
+			<a href="{{pathFor 'editPost'}}">{{title}}</a>
+		</h5>
+		<div class="mgb10 text-small">
+			<ul class="list-inline">
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i> {{creator.displayName}}
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-clock-o"></i>
+						<time class="timeago" datetime="{{timeago createdAt}}"></time>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mgb10 text-indent">{{desc}}</div>
+		<div class="text-small">
+			<ul class="list-inline">
+				<li>
+					<a href="{{pathFor 'editPost'}}" class="edit">编辑</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="remove">删除</a>
+				</li>
+			</ul>
+		</div>
+	</li>
+
+</template>

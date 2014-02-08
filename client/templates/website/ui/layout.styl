@@ -1,0 +1,67 @@
+@import 'nib'
+
+.isWebsite
+	color #999
+	& h1, & h2, & h3
+		margin-top 0
+		margin-bottom 30px
+	& h4, & h5, & h6, & p
+		margin-top 0
+		margin-bottom 15px
+	& h1, & h2, & h3, & h4, & h5, & h6, & a
+		color #333
+	& a
+		color #333
+		&:hover
+			color #000
+
+#website-layout-wrapper
+#website-layout
+#website-page
+	width 100%
+	height @width
+
+#website-topnav
+	position fixed
+	z-index 998
+	top 0
+	left 0
+	width 100%
+	height 100px
+	line-height @height
+	vertical-align bottom
+	background-color rgba(0, 0, 0, .3)
+	color #fff
+	& a
+		color @color
+	& ul
+		list-style none
+		margin 0
+		padding 0
+		& li
+			float left
+			margin-right 20px
+	& ul.pull-right
+		& li
+			margin-left 20px
+
+.website-circle-icon
+	display block
+	margin 0 auto 30px auto
+	width 160px
+	height @width
+	line-height @height
+	border-radius (@width / 2)
+	text-align center
+	font-size 60px
+	background-color #e8e8e8
+
+.website-circle-image
+	overflow hidden
+	display block
+	margin 0 auto 30px auto
+	width 160px
+	height @width
+	border-radius (@width / 2)
+	text-align center
+	background-color #e8e8e8

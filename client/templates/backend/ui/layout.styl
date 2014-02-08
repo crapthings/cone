@@ -1,0 +1,195 @@
+@import 'nib'
+
+.isBackend
+	color #333
+	& h1, & h2, & h3, & h4 , & h5, & h6
+		color #333
+	& a
+		color #333
+		&:hover
+			color #000
+
+#backend-sign-layout-wrapper
+#backend-sign-layout
+	width 100%
+	height @width
+
+#backend-sign-layout
+	display table
+	margin 0 auto
+	width 400px
+
+#backend-signin
+	display table-cell
+	// text-align center
+	vertical-align middle
+
+.va-m
+	vertical-align middle !important
+
+// IDs
+
+#layout-wrapper
+	padding 40px 200px 0 80px
+	width 100%
+	height 100%
+
+#layout
+#page
+	width 100%
+	height @width
+
+#page
+	overflow hidden
+
+#user-avatar
+	display block
+	margin 0 auto
+	width 70px
+	height @height
+	border 1px solid white
+	// border-radius (@width / 2)
+	overflow hidden
+	& > img
+		width 100%
+		height 100%
+
+#avatar-preview
+	width 82px
+	height @width
+	text-align center
+	border 1px solid #ccc
+	cursor pointer
+	& #avatar-picker
+		display none
+	& img
+		width 80px
+		height @width
+
+#avatar-to-crop
+	& canvas
+		width 100%
+
+.task-view
+	position absolute
+	top 0
+	right 0
+	left 400px
+	width auto
+	// right 0
+	// bottom 0
+
+.task-images-wrapper
+	overflow-x scroll
+	overflow-y hidden
+	white-space nowrap
+	width auto
+	clearfix()
+	& > a
+		display inline-block
+		& > img
+			height 400px
+
+.comments-list
+	& > li
+		border-bottom 1px solid #ecf0f1
+
+.module
+	margin-bottom 30px
+	& .heading
+		margin-bottom 15px
+
+.currentTask
+	background-color #e9e4e0
+
+#sign
+	width 100%
+	height 100%
+	background-color #d53e3b
+
+#signin, #signup, #signout
+	background-color #e9e4e0
+
+.fit-width
+	width 100%
+
+.inlist-avatar
+	width 50px
+	height @width
+	border-radius (@width / 2)
+
+#backend-topnav
+	position fixed
+	z-index 99
+	top 0
+	left 0
+	width 100%
+	height 40px
+	line-height @height
+	background-color #d53e3b
+	color #fff
+	clearfix()
+	& a
+		color @color
+		&:hover
+			color #fff
+	& .dropdown ul a
+		color #333
+	& > .text-logo
+		float left
+		margin-left 15px
+	& > ul
+		margin 0
+		& > li
+			& > a
+				display block
+				padding 0 15px
+			& > .dropdown > a
+				display block
+				padding 0 15px
+
+#backend-leftnav
+	position fixed
+	z-index 98
+	top 40px
+	left 0
+	width 80px
+	height 100%
+	background-color #333
+	text-align center
+	& a
+		color #bfbfbf
+
+.list-icon
+	& > li
+		padding 15px 0
+		& > a
+			display block
+			font-size 12px
+			& > i
+				display block
+				margin-bottom 3px
+				font-size 32px
+
+#backend-rightside
+	position fixed
+	top 40px
+	right 0
+	bottom 0
+	width 200px
+	border-left 1px solid #efefef
+	& > ul
+		list-style none
+		margin 0
+		padding 0
+
+.users-online
+	& > li
+		& > a
+			display block
+			padding 15px
+			& > img
+				margin-right 5px
+				width 30px
+				height @width
+				border-radius (@width / 2)

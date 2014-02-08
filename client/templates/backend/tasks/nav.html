@@ -1,0 +1,30 @@
+<template name="backend-tasks-nav">
+
+	<h3 class="pdtb15">{{page.title}}</h3>
+	<ul class="nav nav-tabs">
+		<li class="{{activeFor 'backend-tasks'}}">
+			<a href="{{pathFor 'backend-tasks'}}">任务</a>
+		</li>
+		<li class="{{activeFor 'backend-tasks-urgency'}}">
+			<a href="{{pathFor 'backend-tasks-urgency'}}">
+				紧急 <sup>{{system.stats.tasks.urgency}}</sup>
+			</a>
+		</li>
+		<li class="{{activeFor 'backend-tasks-uncompleted'}}">
+			<a href="{{pathFor 'backend-tasks-uncompleted'}}">
+				未完成 <sup>{{system.stats.tasks.uncompleted}}</sup>
+			</a>
+		</li>
+		<li class="{{activeFor 'backend-tasks-completed'}}">
+			<a href="{{pathFor 'backend-tasks-completed'}}">
+				已完成 <sup>{{system.stats.tasks.completed}}</sup>
+			</a>
+		</li>
+		<li class="{{activeFor 'backend-tasks-closed'}}">
+			<a href="{{pathFor 'backend-tasks-closed'}}">
+				已关闭 <sup>{{system.stats.tasks.closed}}</sup>
+			</a>
+		</li>
+	</ul>
+
+</template>

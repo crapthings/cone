@@ -1,0 +1,38 @@
+<template name="website-topnav">
+
+	<nav id="website-topnav" data-0="background-color: rgba(51, 51, 51, 0);" data-300="background-color: rgba(51, 51, 51, .7);">
+		<div class="container">
+			<ul class="pull-right hidden-xs">
+				<li>
+					<a data-scroll data-speed="2000" data-easing="linear" data-url="true" href="#news-section">公司动态</a>
+				</li>
+				<li>
+					<a href="javascript:;">关于我们</a>
+				</li>
+				<li>
+					<a href="javascript:;">服务范围</a>
+				</li>
+				<li>
+					<a href="javascript:;">项目展示</a>
+				</li>
+				<li>
+					<a href="javascript:;">客户列表</a>
+				</li>
+				<li>
+					<a href="javascript:;">业务关系</a>
+				</li>
+				<li>
+					<a href="javascript:;">联系我们</a>
+				</li>
+				<li>
+					<a href="javascript:;">人才招聘</a>
+				</li>
+				<li>
+					<a href="{{pathFor 'backend-signin'}}">登录</a>
+				</li>
+			</ul>
+			<a href="{{pathFor 'website-home'}}" class="text-logo">球果通信</a>
+		</div>
+	</nav>
+
+</template>
